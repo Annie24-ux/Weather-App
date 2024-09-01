@@ -1,58 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
-    <link rel="stylesheet" href="style.css" >
-
-
-    <header>
-        <form>
-            <input type="search" placeholder="Enter a city">
-            <input type="Search" placeholder="Search">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>My weather application</title>
+  </head>
+  <body>
+    <div class="weather-app">
+      <header>
+        <form id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            required
+            class="search-input"
+            id="search-input"
+          />
+          <input type="submit" value="Search" class="search-button" />
         </form>
-    </header>
-    <h1>Nelspruit</h1>
-
-</head>
-<body>
-    <main>
-        <div class="current weather">
-    <p>Monday, broken clouds <br/>
-        Humidity: 86%, Wind: 8.23km/h</p>
-        <div class="weather forecast">
-        
-    <ul>
-        <li>&#x1F327
-        <br/>
-        <strong>21 &deg;C </strong>
-    </li>
-        <!-- <li>Tue &#x26C5
-            <br/>
-            <strong>19  &deg;C</strong> 12 &deg;C
-        </li>
-
-        <li>Wed &#x263C
-            <br/>
-            <strong>23  &deg;C </strong> 16&deg;C
-        </li>
-
-        <li>Thu &#x26C8
-            <br/>
-            <strong>22  &deg;C</strong>  10&deg;C
-        </li>
-
-        <li>Fri &#x1F325
-            <br/>
-            
-            <strong>17  &deg;C </strong>  14&deg;C
-        </li> -->
-
-    </ul>
-</div>            
-</main>
-   <footer><p>This app was programmed by <a href="https.//semrush.com">Sibiya Siphesihle</a>   &#10084;</p></footer> 
-</body>
+      </header>
+      <main>
+        <div class="current-weather">
+          <div>
+            <h1 class="current-city" id="current-city">Paris</h1>
+            <p class="current-details">
+              <span id="current-date"></span>, moderate rain <br />
+              Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+            </p>
+          </div>
+          <div class="current-temperature">
+            <span class="current-temperature-icon">☀️</span
+            ><span class="current-temperature-value">24</span
+            ><span class="current-temperature-unit">°C</span>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p>
+          This project was coded by
+          <a href="#" target="_blank">Matt Delac</a> and is
+          <a href="#" target="_blank"> on GitHub</a> and
+          <a href="#" target="_blank">hosted on Netlify</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+  <script src="src/index.js"></script>
 </html>
