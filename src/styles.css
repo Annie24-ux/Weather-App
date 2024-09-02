@@ -116,6 +116,7 @@ p{
   a {
     font-weight: 100;
   }
+
   
   #weather-div{
     font-size: 20px;
@@ -128,4 +129,40 @@ p{
   main{
     padding: 40px 0px;
   }
+
+/* For the rest of the daily updates */
+ 
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+
   
+.weather-day {
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+
+.daily-icon {
+  font-size: 38px;
+  text-align: center;
+  justify-content: center;
+
+}
+.weather-values{
+  display: flex;
+  color:red;
+  margin-top: 10px;
+  text-align: center;
+  justify-content: center;
+}
+
+.weather-temp {
+  padding: 0 10px;
+}
