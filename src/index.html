@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    
-    <link rel="stylesheet" href="./styles.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+<link rel="stylesheet" href="./styles.css">
+  <title>Weather_App</title>
+</head>
+<body>
 
-    <title>My weather application</title>
-    
-  </head>
-  <body>
-    <div class="weather-app">
-      <header>
-        <form id="search-form">
-          <input
-            type="search"
-            placeholder="Enter a city.."
-            required
-            class="search-input"
-            id="search-input"
-          />
-          <input type="submit" value="Search" class="search-button" />
-        </form>
-      </header>
-      <main>
-        <div class="current-weather">
-          <div>
-            <h1 class="current-city" id="current-city">Paris</h1>
-            <p class="current-details">
-              <span id="current-date"></span>, moderate rain <br />
-              Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
-            </p>
-          </div>
-          <div class="current-temperature">
-            <span class="current-temperature-icon">☀️</span
-            ><span class="current-temperature-value">24</span
-            ><span class="current-temperature-unit">°C</span>
-          </div>
+  <div class="weather-app">
+
+    <h1 class="intro">Welcome to the Weather app</h1>
+
+    <header>
+      <form id="search-form">
+        <input id="form-input" type="text" placeholder="Enter your city..." required>
+        <input id="answer" type="button" value="Search">
+      </form>
+    </header>
+   
+
+    <main>
+
+      <div id="weather-div">
+
+        <div class="weather-details">
+          <h1 class="current-city" id="city"></h1>
+          <p class="curr-deets">
+            <span id="time"></span>
+            <span id="description"></span><br/>
+            Humidity: <strong class="humid" id="humid"></strong>, Wind: <strong class="wind" id="wind"></strong>
+          </p>
         </div>
-      </main>
-      <footer>
-        <p>
-          This project was coded by
-          <a href="https://github.com/Annie24-ux/" target="_blank">Siphesihle Sibiya</a> and is
-          <a href="https://github.com/Annie24-ux/Weather-App" target="_blank"> on GitHub</a> and
-          <a href="https://allweatherchecker.netlify.app" target="_blank">hosted on Netlify</a>
-        </p>
-      </footer>
-    </div>
+        
+        <div class="current-weather">
+          <br>
+          <div class="weather-icon" id="weather-icon">
+          </div>
+          <span id="temperature"></span>
+          <span id="metric">°C</span>
+        </div>
+
+      </div>
+    </main>
+
+    <footer>
+      Built by <a href="https://github.com/Annie24-ux/">Siphesihle ❤️</a> <br>
+      And is on <a href="https://github.com/Annie24-ux/Weather-App" target="_blank">Github</a> hosted on <a href="https://allweatherchecker.netlify.app" target="_blank">Netlify</a>
+  </footer>
+
+
+  </div>
     <script src="./index.js"></script>
-  </body>
   
+</body>
 </html>
