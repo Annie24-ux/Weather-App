@@ -1,3 +1,11 @@
+function searchSubmitHandler(event){
+    event.preventDefault();
+    let searchInput = document.querySelector("#form-input2");
+
+    citySearch(searchInput.value);
+}
+
+
 function refreshWeather(response){
     let temperatureElement = document.querySelector("#temperature");
     let temperature = Math.round(response.data.temperature.current);
@@ -27,8 +35,7 @@ function refreshWeather(response){
 
     let iconElement = document.querySelector("#weather-icon");
     iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" />`;
-    // let icon = response.data.condition.icon;
-    // iconElement.innerHTML = icon;
+  
 
     function formatDate(date){
 
@@ -65,12 +72,7 @@ function citySearch(city){
 }
 
 
-function searchSubmitHandler(event){
-    event.preventDefault();
-    let searchInput = document.querySelector("#form-input");
 
-    citySearch(searchInput.value);
-}
 
 
 
