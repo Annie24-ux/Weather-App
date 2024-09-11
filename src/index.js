@@ -5,24 +5,6 @@ function searchSubmitHandler(event) {
 }
 
 
-/*
-function handleSearchSubmit(event) {
-  event.preventDefault();
-  let searchInput = document.querySelector("#search-form-input");
-*/
-
-/*<input
-type="search"
-placeholder="Enter a city.."
-required
-id="search-form-input"
-class="search-form-input"
-/>
-
-<input type="submit" value="Search" class="search-form-button" />
-*/
-
-
 function refreshWeather(response){
     let temperatureElement = document.querySelector("#temperature");
     let temperature = Math.round(response.data.temperature.current);
@@ -79,7 +61,6 @@ function refreshWeather(response){
 }
 
 
-
 function citySearch(city){
     let apiKey = "b2a5adcct04b33178913oc335f405433";
     let weatherUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
@@ -88,17 +69,7 @@ function citySearch(city){
     axios.get(weatherUrl).then(refreshWeather);
 }
 
-
-
-
-
-
-
-
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", searchSubmitHandler);
-
-//document.querySelector("#search-form").addEventListener("submit", searchSubmitHandler);
-
 
 citySearch("Malelane");
