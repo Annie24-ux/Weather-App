@@ -5,6 +5,23 @@ function searchSubmitHandler(event){
     citySearch(searchInput.value);
 }
 
+/*
+function handleSearchSubmit(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-form-input");
+*/
+
+/*<input
+type="search"
+placeholder="Enter a city.."
+required
+id="search-form-input"
+class="search-form-input"
+/>
+
+<input type="submit" value="Search" class="search-form-button" />
+*/
+
 
 function refreshWeather(response){
     let temperatureElement = document.querySelector("#temperature");
