@@ -96,7 +96,7 @@ function citySearch(city){
 
 
 let searchFormElement = document.querySelector("#search-form");
-searchFormElement.addEventListener("click", searchSubmitHandler);
+searchFormElement.addEventListener("submit", searchSubmitHandler);
 
 //document.querySelector("#search-form").addEventListener("submit", searchSubmitHandler);
 
