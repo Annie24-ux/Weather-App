@@ -1,9 +1,9 @@
-function searchSubmitHandler(event){
+function searchSubmitHandler(event) {
     event.preventDefault();
     let searchInput = document.querySelector("#form-input");
-
     citySearch(searchInput.value);
 }
+
 
 /*
 function handleSearchSubmit(event) {
@@ -95,7 +95,10 @@ function citySearch(city){
 
 
 
-let searchFormElement = document.querySelector("#answer");
+let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("click", searchSubmitHandler);
+
+//document.querySelector("#search-form").addEventListener("submit", searchSubmitHandler);
+
 
 citySearch("Malelane");
