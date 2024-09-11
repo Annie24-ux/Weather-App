@@ -69,7 +69,7 @@ p{
         font-size: 17px;
   }
 
-  #form-input{
+  #form-input, #form-input2{
     background-color: violet;
     padding: 10px 25px;
     border-radius: 6px;
