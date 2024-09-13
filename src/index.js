@@ -69,7 +69,37 @@ function citySearch(city){
     axios.get(weatherUrl).then(refreshWeather);
 }
 
+
+
+
+
+
+function displayDaysForecast() {
+    let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+    let forecastHTML = "";
+  
+    days.forEach(function(day) {
+      forecastHTML += `
+        <div class="weather-card">
+          <div class="weather-day">${day}</div>
+          <div class="daily-icon">🌦️</div>
+          <div class="weather-values">
+            <div class="weather-temp"><strong>12</strong></div>
+            <div class="weather-temp">06</div>
+          </div>
+          
+        </div>`;
+    });
+  
+    let forecastElement = document.querySelector("#forecast");
+    forecastElement.innerHTML = forecastHTML;
+  }
+
+
+
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", searchSubmitHandler);
 
-citySearch("Malelane");
+citySearch("Malelane");   
+displayDaysForecast();

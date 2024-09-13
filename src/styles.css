@@ -133,38 +133,54 @@ p{
   }
 
 /* For the rest of the daily updates */
- 
-.weather-forecast {
+.weather-forecast { 
   display: flex;
-  justify-content: space-around;
+  flex-direction: row; /* Ensure items stack vertically */
+  align-items: center; /* Center items horizontally */
   margin-top: 30px;
+  justify-content: space-between;
+}
+
+.weather-card {
+
 }
 
 
-  
 .weather-day {
   text-align: center;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 20px;
   margin-bottom: 10px;
-  justify-content: center;
 }
-
 
 .daily-icon {
   font-size: 38px;
   text-align: center;
-  justify-content: center;
-
+  padding: 10px 20px;
 }
-.weather-values{
+
+.weather-values {
   display: flex;
-  color:red;
+  flex-direction: row; /* Ensure temperature items are in a row */
+  justify-content: center; /* Center items horizontally */
   margin-top: 10px;
   text-align: center;
-  justify-content: center;
+  color: red;
 }
+
 
 .weather-temp {
   padding: 0 10px;
+  font-size: 14px;
 }
+
+.weather-forecast, .weather-day, .daily-icon, .weather-values, .weather-temp {
+  box-sizing: border-box;
+}
+
+.weather-day, .daily-icon, .weather-values {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
