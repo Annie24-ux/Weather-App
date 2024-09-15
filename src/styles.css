@@ -33,9 +33,7 @@ p{
 }
 
   h1 {
-
     line-height: 28px;
-  
   }
   
   
@@ -135,15 +133,14 @@ p{
 /* For the rest of the daily updates */
 .weather-forecast { 
   display: flex;
-  flex-direction: row; /* Ensure items stack vertically */
-  align-items: center; /* Center items horizontally */
+  flex-direction: row; 
+  align-items: center; 
   margin-top: 20px;
   justify-content: space-evenly;
 }
 
-.weather-card {
-
-}
+/* .weather-card {
+} */
 
 
 .weather-day {
@@ -161,8 +158,8 @@ p{
 
 .weather-values {
   display: flex;
-  flex-direction: row; /* Ensure temperature items are in a row */
-  justify-content: center; /* Center items horizontally */
+  flex-direction: row; 
+  justify-content: center;
   margin-top: 10px;
   text-align: center;
   color: red;
