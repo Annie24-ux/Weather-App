@@ -83,14 +83,8 @@ function getFormattedDay(timestamp){
 
 
 
-
-
-
-
-
 function displayDaysForecast(response) {
   
-    // let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
     let forecastHTML = "";
   
     response.data.daily.forEach(function(day, index) {
@@ -102,8 +96,8 @@ function displayDaysForecast(response) {
           <div class="weather-day">${getFormattedDay(day.time)}</div>
           <img src= "${day.condition.icon_url}" class="daily-icon">
           <div class="weather-values">
-            <div class="weather-temp"><strong>${Math.round(day.temperature.maximum)}</strong></div>
-            <div class="weather-temp">${Math.round(day.temperature.minimum)}</div>
+            <div class="weather-temp"><strong>${Math.round(day.temperature.maximum)}°</strong></div>
+            <div class="weather-temp">${Math.round(day.temperature.minimum)}°</div>
           </div>
           
         </div>`;
@@ -115,6 +109,7 @@ function displayDaysForecast(response) {
     let forecastElement = document.querySelector("#forecast");
     forecastElement.innerHTML = forecastHTML;
   }
+  
 
 
 let searchFormElement = document.querySelector("#search-form");
