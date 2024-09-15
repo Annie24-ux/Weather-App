@@ -64,9 +64,21 @@ function refreshWeather(response){
 function citySearch(city){
     let apiKey = "b2a5adcct04b33178913oc335f405433";
     let weatherUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+    let forecastUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+
     console.log(weatherUrl);
 
     axios.get(weatherUrl).then(refreshWeather);
+
+    axios.get(forecastUrl).then(displayDaysForecast);
+}
+
+
+function getFormattedDay(timestamp){
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  let today = new Date(timestamp * 1000);
+  return days[today.getDay()];
 }
 
 
@@ -74,28 +86,35 @@ function citySearch(city){
 
 
 
-function displayDaysForecast() {
-    let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+
+
+function displayDaysForecast(response) {
+  
+    // let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
     let forecastHTML = "";
   
-    days.forEach(function(day) {
-      forecastHTML += `
+    response.data.daily.forEach(function(day, index) {
+
+      if(index < 5){
+
+        forecastHTML += `
         <div class="weather-card">
-          <div class="weather-day">${day}</div>
-          <div class="daily-icon">🌦️</div>
+          <div class="weather-day">${getFormattedDay(day.time)}</div>
+          <img src= "${day.condition.icon_url}" class="daily-icon">
           <div class="weather-values">
-            <div class="weather-temp"><strong>12</strong></div>
-            <div class="weather-temp">06</div>
+            <div class="weather-temp"><strong>${Math.round(day.temperature.maximum)}</strong></div>
+            <div class="weather-temp">${Math.round(day.temperature.minimum)}</div>
           </div>
           
         </div>`;
+
+      }
+      
     });
   
     let forecastElement = document.querySelector("#forecast");
     forecastElement.innerHTML = forecastHTML;
   }
-
-
 
 
 let searchFormElement = document.querySelector("#search-form");

@@ -137,8 +137,8 @@ p{
   display: flex;
   flex-direction: row; /* Ensure items stack vertically */
   align-items: center; /* Center items horizontally */
-  margin-top: 30px;
-  justify-content: space-between;
+  margin-top: 20px;
+  justify-content: space-evenly;
 }
 
 .weather-card {
@@ -154,9 +154,9 @@ p{
 }
 
 .daily-icon {
-  font-size: 38px;
+  font-size: 2px;
   text-align: center;
-  padding: 10px 20px;
+  padding: 5px 10px;
 }
 
 .weather-values {
