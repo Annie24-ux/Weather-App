@@ -1,5 +1,5 @@
 body{
-    background-color: plum;
+    background-color:#B0E0E6;
     font-family: "Titillium Web", sans-serif;
 }
 
@@ -14,7 +14,7 @@ h1{
 a{
   font-style: italic;
   text-decoration: none;
-  text-decoration-color: plum;
+  text-decoration-color: #6CBEC7;
 }
 
 p{
@@ -59,7 +59,7 @@ p{
   
   #answer{
     
-        background-color: violet;
+        background-color: #6CBEC7;
         padding: 10px 25px;
         border-radius: 6px;
         color: white;
@@ -68,7 +68,7 @@ p{
   }
 
   #form-input, #search-button{
-    background-color: violet;
+    background-color: #6CBEC7;
     padding: 10px 25px;
     border-radius: 6px;
     color: white;
